@@ -1,0 +1,19 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }}
+
+    <div class="card text-left">
+      <div class="card-body">
+        <h4 class="card-title">Usuarios</h4>
+        <p class="card-text">Edit name and e-mail</p>
+        <form method="POST" action="update">
+          <input type="hidden" name="uid" value="{{ .Id }}" />
+          <label> Name </label><input type="text" name="name" value="{{ .Name }}"  /><br />
+          <label> E-Mail </label><input type="text" name="email" value="{{ .Email }}"  /><br />
+          <input class="btn btn-primary" type="submit" value="Save user" />
+          <a name="" id="" class="btn btn-danger" href="/delete?id={{ .Id }}" role="button">Delete</a>
+        </form>
+      </div>
+    </div>
+  {{ template "Footer" }}
+{{ end }}

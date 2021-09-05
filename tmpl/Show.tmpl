@@ -1,0 +1,14 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+    <div class="card text-left">
+      <div class="card-body">
+        <h4 class="card-title">Usuarios</h4>
+        <p class="card-text"> Register {{ .Id }}</p>
+        <p>Name: {{ .Name }}</p>
+        <p>E-Mail:  {{ .Email }}</p>
+        <a name="" id="" class="btn btn-primary" href="/edit?id={{ .Id }}" role="button">Edit</a>
+      </div>
+    </div>
+  {{ template "Footer" }}
+{{ end }}

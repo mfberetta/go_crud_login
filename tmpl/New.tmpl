@@ -1,0 +1,13 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+    <div class="card text-left">
+      <div class="card-body"> 
+      <p class="card-text">New name and e-mail</p>
+      <form method="POST" action="insert">
+        <label> Name </label><input type="text" name="name" /><br />
+        <label> E-Mail </label><input type="text" name="email" /><br />
+        <input class="btn btn-primary" type="submit" value="Save user" />
+      </form>
+  {{ template "Footer" }}
+{{ end }}
